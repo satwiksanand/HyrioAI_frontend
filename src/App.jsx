@@ -12,21 +12,8 @@ import { ToastContainer } from "react-toastify";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout />,
+    element: <AppLayout />, // This can be publicly accessible
     children: [
-      {
-        element: <PrivateRoute />,
-        children: [
-          {
-            path: "/home",
-            element: <Home />,
-          },
-          {
-            path: "/createJob",
-            element: <CreateJob />,
-          },
-        ],
-      },
       {
         path: "/signup",
         element: <SignUp />,
@@ -42,6 +29,20 @@ const router = createBrowserRouter([
       {
         path: "/verifyMobile",
         element: <VerifyMobile />,
+      },
+      // Protected routes should be inside PrivateRoute now
+      {
+        element: <PrivateRoute />, // Protect these routes
+        children: [
+          {
+            path: "/home",
+            element: <Home />,
+          },
+          {
+            path: "/createJob",
+            element: <CreateJob />,
+          },
+        ],
       },
     ],
   },
