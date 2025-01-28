@@ -1,3 +1,26 @@
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
-}
+[
+  {
+    "source": "/",
+    "destination": "Home"
+  },
+  {
+    "source": "/createJob",
+    "destination": "CreateJob"
+  },
+  {
+    "source": "/signup",
+    "destination": "SignUp"
+  },
+  {
+    "source": "/signin",
+    "destination": "SignIn"
+  },
+  {
+    "source": "/verifyEmail",
+    "destination": "VerifyEmail"
+  },
+  {
+    "source": "/verifyMobile",
+    "destination": "VerifyMobile"
+  }
+]
