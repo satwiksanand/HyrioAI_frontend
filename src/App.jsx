@@ -11,13 +11,14 @@ import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <AppLayout />,
     children: [
       {
         element: <PrivateRoute />,
         children: [
           {
-            path: "/",
+            path: "/home",
             element: <Home />,
           },
           {
